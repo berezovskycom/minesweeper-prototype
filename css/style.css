@@ -12,17 +12,19 @@ body {
 }
 
 .game {
-	width: 230px;
-	height: 230px;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	width: 205px;
+	height: 205px;
 	padding: 10px; /* or 5px 2px */
 	/*border: 10px solid #c3c3c3;*/
 }
 
 .game div {
-	display: inline-block;
 	box-sizing: border-box;
 	background-color: #e8e8e8;
-	margin: 2px;
+	margin: 3px;
 	width: 28px;
 	height: 28px; 
 }
