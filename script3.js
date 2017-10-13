@@ -1,32 +1,41 @@
 const blocks = document.querySelectorAll('.game div');
 const liveNumber = document.querySelector('.lives-num');
+const retryBtn = document.querySelector('.game-over button');
 let lives = 1;
-
-let rand = Math.floor(Math.random() * 100);
+let totalBlocks = 0;
 
 function letTheGameBegin(e) {
-	let rand = Math.floor(Math.random() * 100);
-	console.log(e.target, rand);
-	if (rand < 40) {
-		e.target.style.backgroundColor = 'green';
-	} else if (rand < 60) {
-		e.target.style.backgroundColor = 'yellow';
-		lives++;
-	} else if (rand < 90) {
-		e.target.style.backgroundColor = 'red';
-		lives--;
-	} else {
-		e.target.style.backgroundColor = 'white';
-	}
-	liveNumber.innerHTML = lives;
-	if (lives === 0) {
-		document.querySelector('.game-over').style.display = 'flex';
+	const rand = Math.floor(Math.random() * 100);
+	if (!e.target.style.backgroundColor) {
+		if (rand < 40) {
+			e.target.style.backgroundColor = 'green';
+			totalBlocks++;
+		} else if (rand < 60) {
+			e.target.style.backgroundColor = 'yellow';
+			lives++;
+			totalBlocks++;
+		} else if (rand < 90) {
+			e.target.style.backgroundColor = 'red';
+			lives--;
+			totalBlocks++;
+		} else {
+			e.target.style.backgroundColor = 'white';
+			totalBlocks++;
+		}
+		liveNumber.innerHTML = lives;
+		if (lives === 0) {
+			document.querySelector('.game-over').style.display = 'flex';
+		}
+		if (totalBlocks === blocks.length) {
+			document.querySelector('.game-over').style.display = 'flex';
+		}
 	}
 }
 
 function startAgain(e) {
-	console.log('Yooo');
 	document.querySelector('.game-over').style.display = 'none';
+	location.reload();
 }
 
+retryBtn.addEventListener('click', startAgain);
 blocks.forEach(block => block.addEventListener('click', letTheGameBegin));
