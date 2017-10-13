@@ -27,7 +27,7 @@ body {
 	height: 28px; 
 }
 
-.game-over {
+.game-over, .game-win {
 	z-index: 100;
 	position: absolute;
 	width: 100%;
@@ -35,21 +35,37 @@ body {
 	flex-direction: column;
     justify-content: center;
     align-items: center;	
-	background-color: red;
 	color: #000;
-	font-size: 4em;
+	font-size: 4rem;
 	font-weight: bold;
 	display: none;
+	animation: .5s ease-in opacityLvl;
 }
 
-.game-over button {
+.game-over {
+	background-color: red;
+}
+
+.game-win {
+	background-color: green;
+}
+
+.game-over button, .game-win button{
 	border: none;
 	outline: none;
 	font-family: monospace;
 	background-color: #fff;
 	width: 60%;
 	padding: 10px;
-	font-size: 2em;
+	font-size: 2rem;
 	cursor: pointer;
+}
 
+@keyframes opacityLvl {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
