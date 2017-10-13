@@ -27,7 +27,7 @@ function letTheGameBegin(e) {
 			document.querySelector('.game-over').style.display = 'flex';
 		}
 		if (totalBlocks === blocks.length) {
-			document.querySelector('.game-over').style.display = 'flex';
+			document.querySelector('.game-win').style.display = 'flex';
 		}
 	}
 }
