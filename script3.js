@@ -8,14 +8,14 @@ function letTheGameBegin(e) {
 	const rand = Math.floor(Math.random() * 100);
 	if (!e.target.style.backgroundColor) {
 		if (rand < 40) {
-			e.target.style.backgroundColor = 'green';
+			e.target.style.backgroundColor = 'rgb(51,51,153)';
 			totalBlocks++;
 		} else if (rand < 60) {
-			e.target.style.backgroundColor = 'yellow';
+			e.target.style.backgroundColor = 'rgb((255, 117, 56)';
 			lives++;
 			totalBlocks++;
 		} else if (rand < 90) {
-			e.target.style.backgroundColor = 'red';
+			e.target.style.backgroundColor = 'rgb(255,36,0)';
 			lives--;
 			totalBlocks++;
 		} else {
