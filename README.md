@@ -1,1 +1,1 @@
-# minesweeper
+# lucky
