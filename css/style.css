@@ -1,12 +1,12 @@
 body {
-	padding: 0;
-	margin: 0;
-	display: flex;
+    padding: 0;
+    margin: 0;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: monospace;
+    font-family: sans-serif;
     text-align: center;
     z-index: 1;
 }
@@ -26,7 +26,8 @@ body {
 	background-color: #e8e8e8;
 	margin: 3px;
 	width: 28px;
-	height: 28px; 
+	height: 28px;
+	border-radius: 100px;
 }
 
 .game-over, .game-win {
@@ -38,28 +39,28 @@ body {
     justify-content: center;
     align-items: center;	
 	color: #000;
-	font-size: 4rem;
+	font-size: 2rem;
 	font-weight: bold;
 	display: none;
 	animation: .5s ease-in opacityLvl;
 }
 
 .game-over {
-	background-color: red;
+	background-color: rgb(255,36,0);
 }
 
 .game-win {
-	background-color: green;
+	background-color: rgb(51,51,153);
 }
 
 .game-over button, .game-win button{
 	border: none;
 	outline: none;
-	font-family: monospace;
+	font-family: inherit;
 	background-color: #fff;
-	width: 60%;
+	width: 300px;
 	padding: 10px;
-	font-size: 2rem;
+	font-size: 1rem;
 	cursor: pointer;
 }
 
