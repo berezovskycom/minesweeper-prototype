@@ -11,7 +11,7 @@ function letTheGameBegin(e) {
 			e.target.style.backgroundColor = 'rgb(51,51,153)';
 			totalBlocks++;
 		} else if (rand < 60) {
-			e.target.style.backgroundColor = 'rgb((255, 117, 56)';
+			e.target.style.backgroundColor = 'rgb(255, 117, 56)';
 			lives++;
 			totalBlocks++;
 		} else if (rand < 90) {
