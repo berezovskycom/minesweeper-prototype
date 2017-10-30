@@ -51,6 +51,7 @@ body {
 
 .game-win {
 	background-color: rgb(51,51,153);
+	color: #fff;
 }
 
 .game-over button, .game-win button{
